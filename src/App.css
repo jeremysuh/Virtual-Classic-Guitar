@@ -10,7 +10,7 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 125px;
   padding: 20px;
   color: white;
 }
@@ -19,16 +19,19 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
-}
+.tab_input{
 
-.tab-input{
-  height: 200px;
-  resize: none;
-  font-size: 28px;
-  background-color: #fae5d3;
-  overflow: hidden;
+ margin: 5px;
+ padding: 5px;
+ width: 32%;
+ font-size: 16px;
+ background-color: #FF7F7F;
+ border-top: none;
+ border-left: none;
+ border-right: none;
+ border-bottom: none;
+ border-radius: 8px;
+
 }
 
 @keyframes App-logo-spin {
