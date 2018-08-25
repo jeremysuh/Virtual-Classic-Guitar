@@ -1,0 +1,32 @@
+.tab_input{
+
+ margin: 5px;
+ padding: 5px;
+ width: 36%;
+ font-size: 16px;
+ background-color: #FF7F7F;
+ border-top: none;
+ border-left: none;
+ border-right: none;
+ border-bottom: none;
+ border-radius: 8px;
+
+}
+
+#music_tab_selector{
+    margin-right: 2%;
+
+}
+
+
+#tempo_input{
+  width: 4%;
+  margin-right: 2%;
+  
+}
+
+span {
+    white-space: pre-wrap;
+     font-family: "Trebuchet MS"
+}
+
