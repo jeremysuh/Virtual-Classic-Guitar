@@ -105,7 +105,7 @@ render() {
             <div id="main_buttons">
 
 
-            <button class = "music_button" onClick={this.handleClick}> {this.state.counter} </button>
+            <button class = "music_button" onClick={this.handleClick}> Play </button>
             <button class = "music_button"> Pause </button>
             <button class = "music_button"> Stop </button>
 
