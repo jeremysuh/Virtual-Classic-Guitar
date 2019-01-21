@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+</style><style type="text/css">.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  -webkit-animation: App-logo-spin infinite 20s linear;
+          animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+
+#guitar_image{
+   
+  height: 10em;
+
+
+}
+
+#note{
+   
+  height: 80px;
+
+
+}
+
+.App-header {
+  background-color: #222;
+  background-image: url(/static/media/header_background.96fe35ae.png);
+  height: 125px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.tab_input{
+
+ margin: 5px;
+ padding: 5px;
+ width: 32%;
+ font-size: 16px;
+ background-color: #FF7F7F;
+ border-top: none;
+ border-left: none;
+ border-right: none;
+ border-bottom: none;
+ border-radius: 8px;
+
+}
+
+#guitar_tab_panel{
+
+  float:left;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes App-logo-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+body {background-color: #990000}
+</style><style type="text/css">.tab_input{
+
+ margin: 5px;
+ padding: 5px;
+ width: 36%;
+ font-size: 16px;
+ background-color: #FF7F7F;
+ border-top: none;
+ border-left: none;
+ border-right: none;
+ border-bottom: none;
+ border-radius: 8px;
+ 
+}
+
+#music_tab_selector{
+    margin-right: 2%;
+
+}
+
+
+#tempo_input{
+  width: 4%;
+  margin-right: 2%;
+  
+}
+
+span {
+    white-space: pre-wrap;
+     font-family: "Trebuchet MS"
+}
+
+</style><style type="text/css">.music_button{
+
+ margin: 5px;
+ padding: 5px;
+ width: 8%;
+ font-size: 16px;
+ border-radius: 8px;
+ outline:none;
+
+}</style></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="App"><header class="App-header"><img src="./React App_files/note.a73769b7.png" id="note" alt="note"><h1 class="App-title">Virtual Classical Guitar</h1></header><br><div><div id="tabs">E <input class="tab_input" id="one"><br>B  <input class="tab_input" id="two"><br>G  <input class="tab_input" id="three"><br>D  <input class="tab_input" id="four"><br>A  <input class="tab_input" id="five"><br>E  <input class="tab_input" id="six"></div><br><span>Sample Tabs:  </span><select id="music_tab_selector"><option value="1">Recuerdos</option><option value="2">Asturias</option><option value="3">Romance</option><option value="4">Bourrée 996</option></select><span>Tempo (bpm):  </span><input id="tempo_input" value="108"><br><br><div id="main_buttons"><button class="music_button"> Play </button><button class="music_button"> 0 </button><button class="music_button"> Stop </button></div></div><img src="./React App_files/guitar.d6b79bf9.png" id="guitar_image" alt="guitar"></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script type="text/javascript" src="./React App_files/bundle.js"></script>
+
+</body></html>

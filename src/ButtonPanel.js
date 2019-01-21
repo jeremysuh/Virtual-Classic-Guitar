@@ -4,38 +4,19 @@ import Pizzicato from 'pizzicato';
 import {Howl, Howler} from 'howler';
 
 
-import logo from './bark.wav';
-import logo2 from './bark.wav';
+import logo from './beep.mp3';
+import logo2 from './note.mp3';
 
 
 
 
-
-
-
-class Sound {
-
-  constructor() {
-    console.log("hello")
-  }
-
-  init() {
-       console.log("hello")
-
-  }
-
-  return50(){
-    return 50;
-  }
-
- 
-
-}
 
     
-var sound;
-var acousticGuitar;
-var thesound;
+var sound, sound2;
+var acousticGuitarSound;
+var thesound, thesound2;
+
+var stringOne, stringTwo, stringThree, stringFour, stringFive, stringSix;
 class ButtonPanel extends Component {
 
 
@@ -54,11 +35,19 @@ class ButtonPanel extends Component {
 
 
     init(){
-    thesound = logo;
-    acousticGuitar = new Pizzicato.Sound(thesound);
+
+
+    thesound = logo2;
+    acousticGuitarSound = new Pizzicato.Sound(thesound);
     sound = new Howl({
-  src: [logo]
-});
+    src: [logo2]
+    });
+
+    thesound = logo;
+    acousticGuitarSound = new Pizzicato.Sound(thesound);
+    sound2 = new Howl({
+    src: [logo]
+    });
 
     }
 
@@ -67,13 +56,13 @@ class ButtonPanel extends Component {
     handleClick = () => {
 
 
-        var s = new Sound();
 
-        this.setState(() => ({
-            counter: s.return50()
-         }));
+       // this.setState(() => ({
+         //   counter: s.return50()
+        // }));
 
                
+        sound2.play();
         sound.play();
 
     };
@@ -95,15 +84,9 @@ class ButtonPanel extends Component {
 render() {
 
 
-
- 
-
-
-
     
         return (
             <div id="main_buttons">
-
 
             <button class = "music_button" onClick={this.handleClick}> Play </button>
             <button class = "music_button"> Pause </button>
