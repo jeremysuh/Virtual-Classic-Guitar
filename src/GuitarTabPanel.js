@@ -33,11 +33,6 @@ var freq_six = [1, 92/87, 98/87, 104/87, 110/87, 117/87, 123/87, 131/87, 139/87,
 class GuitarTabPanel extends Component {
 
 
-
-
-
-  
-
     constructor(props){
         super(props);
         this.init();
@@ -56,10 +51,6 @@ class GuitarTabPanel extends Component {
           play_note: false,
 
         };
-
-
-
-
 
     }
 
@@ -146,7 +137,7 @@ class GuitarTabPanel extends Component {
 
         play_notes = () => {
 
-            if (this.state.play_note == true & this.state.tabIndex > 0){
+          if (this.state.play_note == true & this.state.tabIndex > 0){
               
 
           var note_one = this.state.stringOne[this.state.tabIndex-1];
@@ -168,8 +159,6 @@ class GuitarTabPanel extends Component {
           }
 
 
-
-
           if (note_two >= 0 | note_two <= 15){
             rate = this.determine_rate(2, note_two);
             sound2.rate(rate);
@@ -180,7 +169,6 @@ class GuitarTabPanel extends Component {
           }
 
 
-
         if (note_three >= 0 | note_three <= 15){
             rate = this.determine_rate(3, note_three);
             sound3.rate(rate);
@@ -189,7 +177,6 @@ class GuitarTabPanel extends Component {
           }else{
             volume = 0;
           }
-
 
 
         if (note_four >= 0 | note_four <= 15){
@@ -220,16 +207,9 @@ class GuitarTabPanel extends Component {
             volume = 0;
           }
 
-
-           
-
-
-
                 this.setState({
                  play_note: false,
                   });
-
-
 
             }
 
@@ -308,8 +288,7 @@ class GuitarTabPanel extends Component {
           play: true
           });
 
-    
-
+  
 
     }
 
@@ -334,6 +313,7 @@ class GuitarTabPanel extends Component {
       });
 
     }
+    
     componentDidMount() {
       console.log("hello?");
 
@@ -342,9 +322,6 @@ class GuitarTabPanel extends Component {
   componentWillUnmount() {
 
     }
-
-
-
 
          returnTabOne = () => {
         
