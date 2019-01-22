@@ -288,8 +288,6 @@ class GuitarTabPanel extends Component {
           play: true
           });
 
-  
-
     }
 
 
@@ -313,7 +311,7 @@ class GuitarTabPanel extends Component {
       });
 
     }
-    
+
     componentDidMount() {
       console.log("hello?");
 
@@ -420,9 +418,6 @@ render() {
             <button class = "music_button" onClick={this.stop}> Stop </button>
 
              </div>
-
-
-
 
 
         </div>
