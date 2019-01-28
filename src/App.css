@@ -33,6 +33,10 @@
 
 .App-title {
   font-size: 1.5em;
+  font-family: Georgia,Times,Times New Roman,serif; 
+  font-style: italic;
+
+
 }
 
 .tab_input{
@@ -41,18 +45,23 @@
  padding: 5px;
  width: 32%;
  font-size: 16px;
- background-color: #FF7F7F;
+ background-color: #fc8585;
  border-top: none;
  border-left: none;
  border-right: none;
  border-bottom: none;
  border-radius: 8px;
+   font-family: Georgia,Times,Times New Roman,serif; 
+
 
 }
 
 #guitar_tab_panel{
 
   float:left;
+  font-family: Georgia,Times,Times New Roman,serif; 
+    color: #EEE8AA;
+
 }
 
 @keyframes App-logo-spin {
@@ -60,4 +69,8 @@
   to { transform: rotate(360deg); }
 }
 
-body {background-color: #990000}
+body {
+    background: #191515;
+    background-image: linear-gradient(to bottom, #990000, #3d0000);
+
+}

@@ -38,13 +38,14 @@ class GuitarTabPanel extends Component {
         this.init();
 
          this.state = {
-          stringOne: "1",
-          stringTwo: "2",
-          stringThree: "3",
-          stringFour: "4",
-          stringFive: "5",
-          stringSix: "6",
+          stringOne: "",
+          stringTwo: "",
+          stringThree: "",
+          stringFour: "",
+          stringFive: "",
+          stringSix: "",
           tabIndex: 0,
+          tab_length: 0,
           play: false,
           clickedOnce: false,
           bpm: 120,
@@ -107,11 +108,8 @@ class GuitarTabPanel extends Component {
 
      }
 
-    
-
 
     handleClick = () => {
-
 
 
       this.setState({
@@ -122,20 +120,17 @@ class GuitarTabPanel extends Component {
           stringFive: document.getElementById("five").value,
           stringSix: document.getElementById("six").value,
           bpm: document.getElementById("tempo_input").value,
-          play_note: false
+          play_note: false,
       }, this.testfunction);
 
 
 
-       // this.setState(() => ({
-         //   counter: s.return50()
-        // }));
-               
         this.play();
 
     };
 
         play_notes = () => {
+
 
           if (this.state.play_note == true & this.state.tabIndex > 0){
               
@@ -144,11 +139,43 @@ class GuitarTabPanel extends Component {
           var note_two = this.state.stringTwo[this.state.tabIndex-1];
           var note_three = this.state.stringThree[this.state.tabIndex-1];
           var note_four = this.state.stringFour[this.state.tabIndex-1];
-          var  note_five = this.state.stringFive[this.state.tabIndex-1];
-          var  note_six = this.state.stringSix[this.state.tabIndex-1];
+          var note_five = this.state.stringFive[this.state.tabIndex-1];
+          var note_six = this.state.stringSix[this.state.tabIndex-1];
 
           var rate = 1;
           var volume = 1;
+
+          this.setState({
+                 tab_length: this.state.stringOne.length,
+          });
+
+          if (this.state.stringTwo.length >= this.state.tab_length){
+            this.setState({
+                 tab_length: this.state.stringTwo.length,
+              });
+          }
+          if (this.state.stringThree.length >= this.state.tab_length){
+            this.setState({
+                 tab_length: this.state.stringThree.length,
+              });
+          }
+          if (this.state.stringFour.length >= this.state.tab_length){
+            this.setState({
+                 tab_length: this.state.stringFour.length,
+              });
+          }
+          if (this.state.stringFive.length >= this.state.tab_length){
+            this.setState({
+                 tab_length: this.state.stringFive.length,
+              });
+          }
+          if (this.state.stringSix.length >= this.state.tab_length){
+            this.setState({
+                 tab_length: this.state.stringSix.length,
+              });
+          }
+
+
       
           if (note_one >= 0 | note_one <= 15){
             rate = this.determine_rate(1, note_one);
@@ -195,8 +222,6 @@ class GuitarTabPanel extends Component {
           }else{
             volume = 0;
           }
-
-
               
 
         if (note_six >= 0 | note_six <= 15){
@@ -250,11 +275,9 @@ class GuitarTabPanel extends Component {
 
     play = () => {
 
-
             var the_bpm = this.state.bpm;
             
 
-      
         if (!this.state.play){
 
           if (the_bpm < 0 | the_bpm > 240 | the_bpm == null){
@@ -270,23 +293,34 @@ class GuitarTabPanel extends Component {
           this.timer = setInterval(() => {
 
 
+          if (this.state.tabIndex > this.state.tab_length){
+              this.stop(); //stop if ends
+          }else{
+
           this.setState((state, props) => ({
            tabIndex: state.tabIndex + 1,
            play_note: true
-          }));
+          }))
+
+          }
+          
 
 
           }, 60000/the_bpm);
+
+
 
           if (this.state.clickedOnce == false){
           this.notes = setInterval(this.play_notes);
           this.state.clickedOnce = true;
           }
+
           }
 
           this.setState({
           play: true
           });
+
 
     }
 
@@ -307,6 +341,7 @@ class GuitarTabPanel extends Component {
           play: false,
           play_note: false,
           tabIndex: 0,
+          tab_length: 0,
           bpm: document.getElementById("tempo_input").value
       });
 
